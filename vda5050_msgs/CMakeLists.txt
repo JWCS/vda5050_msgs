@@ -15,54 +15,8 @@ find_package(rosidl_default_generators REQUIRED)
 
 find_package(std_msgs REQUIRED)
 
-set(msg_files
-    "msg/Action.msg"
-    "msg/ActionParameter.msg"
-    "msg/ActionParameterDefinition.msg"
-    "msg/AGVAction.msg"
-    "msg/AGVGeometry.msg"
-    "msg/AGVPosition.msg"
-    "msg/BatteryState.msg"
-    "msg/BoundingBoxReference.msg"
-    "msg/Connection.msg"
-    "msg/ControlPoint.msg"
-    "msg/CurrentAction.msg"
-    "msg/Edge.msg"
-    "msg/EdgeState.msg"
-    "msg/Envelope2D.msg"
-    "msg/Envelope3D.msg"
-    "msg/Error.msg"
-    "msg/ErrorReference.msg"
-    "msg/Factsheet.msg"
-    "msg/Info.msg"
-    "msg/InfoReference.msg"
-    "msg/Header.msg"
-    "msg/InstantActions.msg"
-    "msg/Load.msg"
-    "msg/LoadDimensions.msg"
-    "msg/LoadSet.msg"
-    "msg/LoadSpecification.msg"
-    "msg/MaxArrayLens.msg"
-    "msg/MaxStringLens.msg"
-    "msg/Node.msg"
-    "msg/NodePosition.msg"
-    "msg/NodeState.msg"
-    "msg/OptionalParameter.msg"
-    "msg/Order.msg"
-    "msg/OrderState.msg"
-    "msg/PhysicalParameters.msg"
-    "msg/PolygonPoint.msg"
-    "msg/Position.msg"
-    "msg/ProtocolFeatures.msg"
-    "msg/ProtocolLimits.msg"
-    "msg/SafetyState.msg"
-    "msg/Timing.msg"
-    "msg/Trajectory.msg"
-    "msg/TypeSpecification.msg"
-    "msg/Velocity.msg"
-    "msg/Visualization.msg"
-    "msg/WheelDefinition.msg"
-)
+file(GLOB_RECURSE msg_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/**/*.msg")
+
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   DEPENDENCIES

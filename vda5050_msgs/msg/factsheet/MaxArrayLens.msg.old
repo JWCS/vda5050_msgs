@@ -1,0 +1,35 @@
+# Note: vda5050 has key names with dots '.' in them; since they're not representable in rosidl
+# they have been replaced by double underscores (dunder) '__' symbols
+# Note: this doesn't compile; there's no easy way to encode this, except with a lot of classes...
+
+uint32[<=1] order__nodes                    # Maximum number of nodes per order processable by the AGV
+
+uint32[<=1] order__edges                    # Maximum number of edges per order processable by the AGV
+
+uint32[<=1] node__actions                   # Maximum number of action per node processable by the AGV
+
+uint32[<=1] edge__actions                   # Maximum number of action per edge processable by the AGV
+
+uint32[<=1] actions__actions_parameters     # Maximum number of parameters per action processable by the AGV
+
+uint32[<=1] instant_actions                 # Maximum number of instant actions per message processable by the AGV
+
+uint32[<=1] trajectory__knot_vector         # Maximum number of knots per trajectory processable by the AGV
+
+uint32[<=1] trajectory__control_points      # Maximum number of control points per trajectory processable by the AGV
+
+uint32[<=1] state__node_states              # Maximum number of nodeStates sent by the AGV, maximum number of nodes in base of AGV
+
+uint32[<=1] state__edge_states              # Maximum number of edgeStates sent by the AGV, maximum number of edges in base of AGV
+
+uint32[<=1] state__loads                    # Maximum number of load-objects sent by the AGV
+
+uint32[<=1] state__action_states            # Maximum number of actionStates sent by the AGV
+
+uint32[<=1] state__errors                   # Maximum number of errors sent by the AGV in one state-message
+
+uint32[<=1] state__informations             # Maximum number of information objects sent by the AGV in one state-message
+
+uint32[<=1] error__error_references         # Maximum number of error references sent by the AGV for each error
+
+uint32[<=1] informations__info_references   # Maximum number of info references sent by the AGV for each information
