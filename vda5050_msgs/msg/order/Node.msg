@@ -7,12 +7,12 @@ uint32 sequence_id                 # Id to track the sequence of nodes and edges
                                    # nodes and edges of the same order and is reset when a new order_id is
                                    # issued.
 
-string[<=1] node_description       # Additional information on the node
+string      node_description       # Additional information on the node
 
 bool released                      # True indicates that the node is part of the base. False indicates
                                    # that the node is part of the horizon.
 
-NodePosition[<=1] node_position    # Node position
+NodePosition      node_position    # Node position
                                    # Optional: Some vehicle-types do not require node position.
 
 

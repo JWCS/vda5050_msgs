@@ -11,6 +11,6 @@ string manufacturer             # Manufacturer of the AGV
 string serial_number            # Serial Number of the AGV
 
 # CONTENTS
-AgvPosition[<=1] agv_position   # The AGV's position
+AgvPosition      agv_position   # The AGV's position
 
-Velocity[<=1] velocity          # The AGV's velocity in vehicle coordinates
+Velocity      velocity          # The AGV's velocity in vehicle coordinates

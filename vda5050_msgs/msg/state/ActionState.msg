@@ -1,10 +1,10 @@
 # Order of members re-arranged to match Action
-string[<=1] action_type         # Optional: only for informational or visualization
+string      action_type         # Optional: only for informational or visualization
 string action_id                # action_name_ID
-string[<=1] action_description  # Additional information on the current action
+string      action_description  # Additional information on the current action
 string action_status            # Enum {waiting; initializing; running; finished; failed} waiting: waiting for trigger
                                 # failed: action could not be performed.
-string[<=1] result_description  # Description of the result, e.g. the result of a RFID-read. Errors will be transmitted in
+string      result_description  # Description of the result, e.g. the result of a RFID-read. Errors will be transmitted in
                                 # errors. Examples for results are given in 5.2
 
 # Enums for actionStatus

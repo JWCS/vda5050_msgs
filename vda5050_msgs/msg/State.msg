@@ -15,7 +15,7 @@ string order_id                         # Unique order identification “none”
 
 uint32 order_update_id                  # order_update identification. Is unique per order_id. If an order update is rejected, this field is to be passed in the rejection message.
 
-string[<=1] zone_set_id                 # Unique ID of the zone set that the AGV currently uses for path planning. Must be the same as the one used in the order,
+string      zone_set_id                 # Unique ID of the zone set that the AGV currently uses for path planning. Must be the same as the one used in the order,
                                         # otherwise the AGV hasto reject the order. Optional: If the AGV does not use zones, this field can be omitted.
 
 string last_node_id                     # nodeId of last reached node or, if AGV is currently on a node, current node (e.g. „node7”).
@@ -28,11 +28,11 @@ NodeState[] node_states                 # Array of node_state_objects (empty lis
 
 EdgeState[] edge_states                 # Array of edge_state_objects (empty list if idle)
 
-AgvPosition[<=1] agv_position           # Current position of the AGV. Optional: Can only be omitted for
+AgvPosition      agv_position           # Current position of the AGV. Optional: Can only be omitted for
                                         # AGVs without the capability to localize themselves, e.g. line
                                         # guided AGVs.
 
-Velocity[<=1] velocity                  # AGV's velocity in vehicle coordinates
+Velocity      velocity                  # AGV's velocity in vehicle coordinates
 
 Load[] loads                            # Loads that are currently handled by the AGV.
                                         # Optional: If AGV cannot determine load state, leave the array out of the state.
@@ -42,14 +42,14 @@ bool driving                            # True: indicates that the AGV is drivin
                                         # movements of the AGV (e.g. lift movements) are not included here.
                                         # False: indicates that the AGV is neither driving nor rotating
 
-bool[<=1] paused                        # True: AGV is currently in a paused state, either because of the push of a physical button on the AGV or
+bool      paused                        # True: AGV is currently in a paused state, either because of the push of a physical button on the AGV or
                                         # because of an instantAction. The AGV can resume the order.
                                         # False: The AGV is currently not in a paused state
 
-bool[<=1] new_base_request              # True: AGV is almost at the end of the base and will reduce speed if no new base is transmitted. Trigger for MC to send ne base
+bool      new_base_request              # True: AGV is almost at the end of the base and will reduce speed if no new base is transmitted. Trigger for MC to send ne base
                                         # False: no base update required
 
-float64[<=1] distance_since_last_node   # Used by line guided vehicles to indicate the distance it has been driving past the last_node_id. Distance is in meters
+float64      distance_since_last_node   # Used by line guided vehicles to indicate the distance it has been driving past the last_node_id. Distance is in meters
 
 ActionState[] action_states             # Contains a list of the current actions and the actions which are
                                         # yet to be finished. This may include actions from previous nodes

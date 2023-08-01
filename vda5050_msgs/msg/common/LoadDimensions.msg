@@ -2,4 +2,4 @@
 
 float64 length        # Absolute length of the load’s bounding box.
 float64 width         # Absolute width of the load’s bounding box.
-float64[<=1] height   # Absolute height of the load’s bounding box. Optional: Set value only if known.
+float64      height   # Absolute height of the load’s bounding box. Optional: Set value only if known.

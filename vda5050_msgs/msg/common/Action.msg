@@ -8,7 +8,7 @@ string action_id                       # Unique ID to identify the action and ma
                                        # the actionState in the state.
                                        # Suggestion: Use UUIDs.
 
-string[<=1] action_description         # Additional information on the action
+string      action_description         # Additional information on the action
 
 string blocking_type                   # Enum {NONE, SOFT, HARD}
                                        # “NONE” – allows driving and other actions

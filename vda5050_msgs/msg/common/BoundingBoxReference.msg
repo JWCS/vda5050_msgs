@@ -4,4 +4,4 @@
 float64 x           # x-coordinate of the point of reference.
 float64 y           # y-coordinate of the point of reference.
 float64 z           # z-coordinate of the point of reference.
-float64[<=1] theta  # Orientation of the loads bounding box. Important for tugger trains etc
+float64      theta  # Orientation of the loads bounding box. Important for tugger trains etc

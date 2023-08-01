@@ -1,6 +1,6 @@
 string series_name                  # Generalized series name as specified by manufacturer
 
-string[<=1] series_description      # Human readable description of the AGV type series
+string      series_description      # Human readable description of the AGV type series
 
 string agv_kinematic                # Simplified description of AGV kinematics-type
 

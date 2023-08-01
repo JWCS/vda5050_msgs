@@ -3,11 +3,11 @@
 float64 x                                         # [m] X-position on the map in reference to the world coordinate system
 float64 y                                         # [m] Y-position on the map in reference to the world coordinate system
 
-float64[<=1] theta                                # [rad] The angular dimension
+float64      theta                                # [rad] The angular dimension
                                                   # Optional: vehicle can plan the path by itself.
 
 
-float32[<=1] allowed_deviation_x_y                # Indicates how exact an AGV has to drive over a node in order for it
+float32      allowed_deviation_x_y                # Indicates how exact an AGV has to drive over a node in order for it
                                                   # to count as traversed.
                                                   #
                                                   # If = 0: no deviation is allowed (no deviation means within the
@@ -19,7 +19,7 @@ float32[<=1] allowed_deviation_x_y                # Indicates how exact an AGV h
                                                   # Optional: tolerance is left to the implementation of the manufacturer.
                                                   # This seems to imply the default of 0, but does not require explicit transmission.
 
-float32[<=1] allowed_deviation_theta              # Range: [0 ... Pi]
+float32      allowed_deviation_theta              # Range: [0 ... Pi]
                                                   # Indicates how big the deviation of theta angle can be.
                                                   # The lowest acceptable angle  is theta -allowedDevaitionTheta and
                                                   # the  highest acceptable angle is theta + allowedDeviationTheta
@@ -30,4 +30,4 @@ string map_id                                     # Unique identification of the
                                                   # target floor, it will disappear off the map of the departure floor and spawn in the related
                                                   # lift node on the map of the target floor.
 
-string[<=1] map_description                       # Additional information on the map
+string      map_description                       # Additional information on the map

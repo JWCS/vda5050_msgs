@@ -1,7 +1,7 @@
 string key
 string value_data_type
-string[<=1] description
-bool[<=1] is_optional
+string      description
+bool      is_optional
 
 # Enums for valueDataType
 string BOOL = "BOOL"

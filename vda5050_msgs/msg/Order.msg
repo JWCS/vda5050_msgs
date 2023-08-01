@@ -17,7 +17,7 @@ string order_id           # Unique order identification
 uint32 order_update_id    # order_update identification. Is unique per order_id. If an order update is
                           # rejected, this field is to be passed in the rejection message
 
-string[<=1] zone_set_id   # Unique identifier of the zone set that the AGV has to use for navigation or that was used by master controlfor planning
+string      zone_set_id   # Unique identifier of the zone set that the AGV has to use for navigation or that was used by master controlfor planning
                           # Optional: Some master controlsystems do not use zones. Some AGVs do not understand zones. Do not add to message if no zones are used
 
 Node[] nodes              # Array of nodes to be traversed for fulfilling the order. The nodes come
