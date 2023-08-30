@@ -35,7 +35,7 @@ float64      orientation          # [rad] Orientation of the AGV on the edge rel
                                   # If a trajectory without orientation and the orientation field here is defined,
                                   # apply the orientation to the tangent of the trajectory.
 
-float64      orientation_type     # Enum {GLOBAL, TANGENTIAL}
+string      orientation_type     # Enum {GLOBAL, TANGENTIAL}
                                   # "GLOBAL"      - relative to global map coordinate system
                                   # "TANGENTIAL"  - (default) tangential to edge
 
